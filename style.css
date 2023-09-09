@@ -1,0 +1,27 @@
+.calculatorContainer{
+    display: flex;
+    flex-direction: column;
+}
+.calculator{
+display: flex;
+flex-direction: column;
+height: 400px;
+width: 300px;
+background-color: blue;
+align-items: center;
+padding-top: 20px;
+}
+.calculatorDisplay{
+    width: 280px;
+    height: 80px;
+    background-color: greenyellow;
+    margin-bottom: 10px;
+
+}
+.buttonContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    height: 50px;
+    width: 50px;
+}
