@@ -26,8 +26,8 @@ numbers.forEach((number) => number.addEventListener("click", function (e) {
 operators.forEach((op) => op.addEventListener("click", function (e) {
     getOperator(e.target.textContent)
     
-    if(sumValues.toString() <= 9){
-        calcdisplay.textContent = storedValue.slice(0,9) + " " + operator
+    if(sumValues.toString().length <= 9){
+        calcdisplay.textContent = storedValue.toString().slice(0,9) + " " + operator
     }else{
         calcdisplay.textContent = sumValues.toString().slice(0,9) + '..' + " " + operator
     }

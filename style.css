@@ -18,6 +18,7 @@ body {
     background-color: blue;
     align-items: center;
     padding-top: 20px;
+    border-radius: 6px;
 }
 
 .calculatorDisplay {
