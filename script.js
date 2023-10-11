@@ -49,7 +49,7 @@ clear.addEventListener('click', function (e) {
 
 equals.addEventListener('click', function (e) {
     solveOperation()
-    if(sumValues.toString() <= 9){
+    if(sumValues.toString().length <= 9){
     calcdisplay.textContent = sumValues
 }else{
     calcdisplay.textContent = sumValues.toString().slice(0,9) + '..'
@@ -95,18 +95,19 @@ function solveOperation() {
         if (sumValues == 0) {
             sumValues = '0'
         }
-        console.log('resta')
         return sumValues.toString()
 
     } else if (calcdisplay.textContent.includes('X')) {
         sumValues = Number(storedValue) * Number(value)
+        if (sumValues == 0) {
+            sumValues = '0'
+        }
         return sumValues.toString()
 
     } else if (calcdisplay.textContent.includes('/')) {
         sumValues = Number(storedValue) / Number(value)
         return sumValues.toString()
-    }
-
+    }else{}
 
 }
 
@@ -116,6 +117,10 @@ function clearDisplay() {
     sumValues = ''
     operator = ''
     calcdisplay.textContent = value
+}
+
+function roundNumber(num){
+    return Math.round(num * 1000) / 1000;
 }
 
 
